@@ -1,0 +1,7 @@
+# ignore everything, except the things below
+*
+
+!docker-compose.yaml
+!LICENSE
+!README.md
+!.gitignore

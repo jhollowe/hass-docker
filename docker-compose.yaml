@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  home-assistant:
+    image: homeassistant/raspberrypi4-homeassistant:stable
+    container_name: "hass"
+    restart: unless-stopped
+    stop_grace_period: 30s
+    network_mode: host
+    ports:
+      - 8123:8123
+    volumes:
+      - /docker_files/homeassistant/config:/config
+    environment:
+      - TZ=America/New_York
